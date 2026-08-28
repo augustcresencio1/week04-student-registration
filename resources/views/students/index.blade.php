@@ -149,9 +149,15 @@
 
                                     </td>
 
-                                    <td class="px-6 py-5 text-gray-600">
-                                        {{ $student->email }}
-                                    </td>
+                                    <td class="px-6 py-5">
+    <p class="text-gray-700 font-medium">
+        {{ $student->email }}
+    </p>
+
+    <p class="text-xs text-gray-400 mt-1">
+        Email Address
+    </p>
+</td>
 
                                     <td class="px-6 py-5">
 
