@@ -124,9 +124,15 @@
                                 <tr class="student-row border-b">
 
                                     <td class="px-6 py-5">
-                                        <span class="font-bold text-indigo-600">
-                                            {{ $student->student_id }}
-                                        </span>
+                                        <div>
+    <span class="text-xs text-gray-400 uppercase tracking-wide">
+        ID
+    </span>
+
+    <p class="font-bold text-indigo-600">
+        {{ $student->student_id }}
+    </p>
+</div>
                                     </td>
 
                                     <td class="px-6 py-5">
