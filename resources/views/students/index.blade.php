@@ -171,9 +171,11 @@
     </p>
 </div>
 
-                                    <td class="px-6 py-5 text-gray-600">
-                                        {{ $student->year_level }}
-                                    </td>
+                                    <td class="px-6 py-5">
+    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold border border-blue-200">
+        {{ $student->year_level }}
+    </span>
+</td>
 
                                     <td class="px-6 py-5">
 
