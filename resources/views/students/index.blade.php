@@ -162,9 +162,9 @@
                                     <td class="px-6 py-5">
 
                                        <div>
-    <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-semibold">
-        {{ $student->program }}
-    </span>
+    <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-semibold font-medium">
+    {{ $student->program }}
+</span>
 
     <p class="text-xs text-gray-400 mt-2">
         Program
