@@ -68,14 +68,17 @@
             <!-- Gradient Table Header -->
             <div class="main-gradient px-8 py-6 text-white">
 
-                <h2 class="text-2xl font-bold">
-                    Registered Students
-                </h2>
+                <<h2 class="text-2xl font-bold">
+    Registered Students
+</h2>
 
-                <p class="text-blue-100 mt-1">
-                    List of all students in the system
-                </p>
+<p class="text-blue-100 mt-1">
+    List of all students in the system
+</p>
 
+<p class="text-blue-100 mt-2 text-sm font-semibold">
+    Total Students: {{ $students->count() }}
+</p>
             </div>
 
             @if ($students->count() > 0)
