@@ -222,57 +222,33 @@ The email and Student ID are also stored as unique values in the database.
 
 ---
 
-## 11. Flash Message
+## 11. Reflection
 
-After successfully registering a student, the system displays a success notification:
+Validation is an important part of a student registration system because it helps make sure that the information entered by the user is complete and correct. Without validation, users could submit missing, incorrect, or invalid information that may cause problems in the database. Through this project, I learned that validation is necessary to maintain the quality and reliability of the data stored in the system.
 
-**Student registered successfully!**
+One of the lessons I learned about handling user input is that every input should be checked before it is saved. In this project, Laravel validation was used to check required fields such as the student ID, name, email, mobile number, date of birth, gender, program, year level, and address. I also learned that different types of data need different validation rules to make sure that users enter information in the correct format.
 
-This helps the user know that the registration was completed successfully.
+Server-side validation is more reliable than client-side validation because it happens on the server before the data is processed or stored. Client-side validation is useful because it provides quick feedback to users, but it can be bypassed. Server-side validation provides an additional layer of security because the application checks the submitted data before accepting it. Because of this, web applications should not depend only on client-side validation.
+
+Another important lesson from this project is file security. The system allows users to upload profile pictures, so uploaded files need to be checked before they are stored. In this project, the file type and file size are validated to help prevent invalid files from being uploaded. Proper file validation is important because unsafe file uploads can create security risks in web applications.
+
+Registration systems are commonly used in real-world enterprise software. Schools use registration systems to manage student information, while companies use similar systems for employees, customers, members, and other users. These systems make it easier to collect, organize, update, and retrieve information. They also help reduce manual work and improve the accuracy of records.
+
+Overall, this project helped me understand the importance of validation, secure input handling, and proper data management in web application development. I learned that creating a registration system is not only about making forms and saving data. Developers also need to consider security, data accuracy, usability, and maintainability when creating a reliable system.
 
 ---
 
-## 12. Project Structure
+## 12. References
 
-```text
-week04-student-registration/
-│
-├── app/
-│   ├── Http/
-│   │   └── Controllers/
-│   │       └── StudentController.php
-│   │
-│   └── Models/
-│       └── Student.php
-│
-├── database/
-│   ├── migrations/
-│   │   └── create_students_table.php
-│   │
-│   └── database.sqlite
-│
-├── resources/
-│   └── views/
-│       └── students/
-│           ├── create.blade.php
-│           ├── index.blade.php
-│           ├── show.blade.php
-│           └── edit.blade.php
-│
-├── routes/
-│   └── web.php
-│
-├── public/
-│
-├── storage/
-│
-├── tests/
-│
-├── README.md
-├── artisan
-├── composer.json
-└── package.json
-```
+Laravel. (n.d.). *Laravel documentation*. https://laravel.com/docs
+
+PHP Documentation Group. (n.d.). *PHP manual*. https://www.php.net/docs.php
+
+Oracle. (n.d.). *MySQL documentation*. https://dev.mysql.com/doc/
+
+Tailwind Labs. (n.d.). *Tailwind CSS documentation*. https://tailwindcss.com/docs
+
+MDN Web Docs. (n.d.). *MDN Web Docs*. https://developer.mozilla.org/
 
 ---
 
@@ -322,19 +298,19 @@ week04-student-registration/
                          ▼
               ┌─────────────────────┐
               │       ROUTES        │
-              │     web.php         │
+              │       web.php       │
               └──────────┬──────────┘
                          │
                          ▼
               ┌─────────────────────┐
-              │     CONTROLLER      │
+              │      CONTROLLER     │
               │ StudentController   │
               └──────────┬──────────┘
                          │
                          ▼
               ┌─────────────────────┐
-              │       MODEL         │
-              │      Student        │
+              │        MODEL        │
+              │       Student       │
               └──────────┬──────────┘
                          │
                          ▼
@@ -360,9 +336,10 @@ Git was used to track the development of the project.
 The project is hosted on GitHub:
 
 **Repository:**
+
 https://github.com/augustcresencio1/week04-student-registration
 
-The project should contain at least **10 meaningful Git commits** showing the development progress.
+The project contains multiple meaningful Git commits showing the development progress.
 
 ---
 
@@ -373,3 +350,9 @@ The Student Registration System demonstrates the basic use of Laravel in develop
 Through this project, I was able to practice MVC architecture, routing, controllers, Blade views, database operations, validation, CRUD operations, file uploading, Git, and GitHub.
 
 This project also helped me understand how different parts of a Laravel application work together to create a functional student registration system.
+
+---
+
+## 17. Project Status
+
+The Student Registration System is currently functional and ready for testing.
