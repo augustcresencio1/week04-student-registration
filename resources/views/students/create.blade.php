@@ -107,13 +107,14 @@
                         Student ID
                     </label>
 
-                    <input
-                        type="text"
-                        name="student_id"
-                        value="{{ old('student_id') }}"
-                        class="input-style w-full border border-gray-200 rounded-xl px-4 py-3 bg-white"
-                        placeholder="Enter Student ID"
-                    >
+                  <input
+    type="text"
+    name="student_id"
+    value="{{ old('student_id') }}"
+    class="input-style w-full border border-gray-200 rounded-xl px-4 py-3 bg-white"
+    placeholder="Enter Student ID"
+    required
+>
 
                 </div>
 
