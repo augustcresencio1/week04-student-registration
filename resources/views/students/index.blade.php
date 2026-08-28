@@ -137,11 +137,15 @@
 
                                     <td class="px-6 py-5">
 
-                                        <p class="font-bold text-gray-800">
-                                            {{ $student->first_name }}
-                                            {{ $student->middle_name }}
-                                            {{ $student->last_name }}
-                                        </p>
+                                        <div>
+    <p class="font-bold text-gray-800">
+        {{ $student->first_name }} {{ $student->middle_name }} {{ $student->last_name }}
+    </p>
+
+    <p class="text-xs text-gray-400 mt-1">
+        Student
+    </p>
+</div>
 
                                     </td>
 
