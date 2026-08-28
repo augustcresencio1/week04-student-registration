@@ -1,58 +1,375 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Student Registration System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 1. Project Title
 
-## About Laravel
+**Student Registration System**
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+A simple web-based student registration system developed using Laravel.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 2. Introduction
 
-## Learning Laravel
+The Student Registration System is a web application that allows users to register and manage student information.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+This project was created as part of the Week 4 activity for Client-Server Technologies. It demonstrates how Laravel can be used to create a system with forms, database operations, validation, and CRUD functions.
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+## 3. Objectives
 
-## Agentic Development
+The objectives of this project are:
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+* To create a functional student registration system.
+* To practice Laravel MVC architecture.
+* To connect a Laravel application to a database.
+* To create and manage student records.
+* To apply form validation.
+* To upload student profile pictures.
+* To practice CRUD operations.
+* To use Git and GitHub for version control.
 
-```bash
-composer require laravel/boost --dev
+---
 
-php artisan boost:install
+## 4. System Features
+
+The system includes the following features:
+
+* Student Registration
+* Student List
+* Student Profile
+* Edit Student Information
+* Delete Student Record
+* Form Validation
+* Profile Picture Upload
+* Success Flash Message
+* Database Storage
+* Responsive User Interface
+
+---
+
+## 5. Student Information
+
+The registration form collects the following information:
+
+* Student ID
+* First Name
+* Middle Name
+* Last Name
+* Email
+* Mobile Number
+* Date of Birth
+* Gender
+* Program
+* Year Level
+* Address
+* Profile Picture
+
+---
+
+## 6. Technologies Used
+
+* **Laravel**
+* **PHP**
+* **SQLite**
+* **Blade**
+* **Tailwind CSS**
+* **HTML**
+* **Git**
+* **GitHub**
+* **Visual Studio Code**
+
+---
+
+## 7. MVC Architecture
+
+Laravel follows the MVC architecture.
+
+### Model
+
+The **Student Model** handles the student data and communicates with the database.
+
+File:
+
+```text
+app/Models/Student.php
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+### View
 
-## Contributing
+The views are responsible for displaying the registration form, student list, and student profile.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Files are located in:
 
-## Code of Conduct
+```text
+resources/views/students/
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Controller
 
-## Security Vulnerabilities
+The **StudentController** handles the main operations of the system such as creating, viewing, updating, and deleting student records.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+File:
 
-## License
+```text
+app/Http/Controllers/StudentController.php
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### MVC Flow
+
+```text
+User
+  ↓
+Route
+  ↓
+Controller
+  ↓
+Model
+  ↓
+Database
+  ↓
+Controller
+  ↓
+View
+  ↓
+User
+```
+
+---
+
+## 8. Database
+
+The project uses **SQLite** as its database.
+
+Database file:
+
+```text
+database/database.sqlite
+```
+
+Main table:
+
+```text
+students
+```
+
+The students table stores the registered student information.
+
+### Students Table
+
+```text
+students
+├── id
+├── student_id
+├── first_name
+├── middle_name
+├── last_name
+├── email
+├── mobile_number
+├── date_of_birth
+├── gender
+├── program
+├── year_level
+├── address
+├── profile_picture
+├── created_at
+└── updated_at
+```
+
+---
+
+## 9. CRUD Operations
+
+The system supports the basic CRUD operations.
+
+### Create
+
+Users can register a new student through the registration form.
+
+### Read
+
+Registered students can be viewed through the Student List and Student Profile.
+
+### Update
+
+Student information can be edited and updated.
+
+### Delete
+
+Student records can be deleted from the system.
+
+---
+
+## 10. Validation
+
+The registration form uses Laravel validation to make sure that required information is provided.
+
+Examples of validated fields include:
+
+* Student ID
+* First Name
+* Last Name
+* Email
+* Mobile Number
+* Date of Birth
+* Gender
+* Program
+* Year Level
+* Address
+* Profile Picture
+
+The email and Student ID are also stored as unique values in the database.
+
+---
+
+## 11. Flash Message
+
+After successfully registering a student, the system displays a success notification:
+
+**Student registered successfully!**
+
+This helps the user know that the registration was completed successfully.
+
+---
+
+## 12. Project Structure
+
+```text
+week04-student-registration/
+│
+├── app/
+│   ├── Http/
+│   │   └── Controllers/
+│   │       └── StudentController.php
+│   │
+│   └── Models/
+│       └── Student.php
+│
+├── database/
+│   ├── migrations/
+│   │   └── create_students_table.php
+│   │
+│   └── database.sqlite
+│
+├── resources/
+│   └── views/
+│       └── students/
+│           ├── create.blade.php
+│           ├── index.blade.php
+│           ├── show.blade.php
+│           └── edit.blade.php
+│
+├── routes/
+│   └── web.php
+│
+├── public/
+│
+├── storage/
+│
+├── tests/
+│
+├── README.md
+├── artisan
+├── composer.json
+└── package.json
+```
+
+---
+
+## 13. Screenshots
+
+### Student Registration Form
+
+*Add screenshot of the registration form here.*
+
+```text
+[ Insert Registration Form Screenshot ]
+```
+
+### Student List
+
+*Add screenshot of the student list here.*
+
+```text
+[ Insert Student List Screenshot ]
+```
+
+### Student Profile
+
+*Add screenshot of the student profile here.*
+
+```text
+[ Insert Student Profile Screenshot ]
+```
+
+### Database Table
+
+*Add screenshot of the SQLite students table here.*
+
+```text
+[ Insert Database Screenshot ]
+```
+
+---
+
+## 14. System Diagram
+
+```text
+              ┌─────────────────────┐
+              │        USER         │
+              └──────────┬──────────┘
+                         │
+                         ▼
+              ┌─────────────────────┐
+              │       ROUTES        │
+              │     web.php         │
+              └──────────┬──────────┘
+                         │
+                         ▼
+              ┌─────────────────────┐
+              │     CONTROLLER      │
+              │ StudentController   │
+              └──────────┬──────────┘
+                         │
+                         ▼
+              ┌─────────────────────┐
+              │       MODEL         │
+              │      Student        │
+              └──────────┬──────────┘
+                         │
+                         ▼
+              ┌─────────────────────┐
+              │      DATABASE       │
+              │       SQLite        │
+              │      students       │
+              └──────────┬──────────┘
+                         │
+                         ▼
+              ┌─────────────────────┐
+              │        VIEW         │
+              │   Blade Templates   │
+              └─────────────────────┘
+```
+
+---
+
+## 15. Git and GitHub
+
+Git was used to track the development of the project.
+
+The project is hosted on GitHub:
+
+**Repository:**
+https://github.com/augustcresencio1/week04-student-registration
+
+The project should contain at least **10 meaningful Git commits** showing the development progress.
+
+---
+
+## 16. Conclusion
+
+The Student Registration System demonstrates the basic use of Laravel in developing a web-based application.
+
+Through this project, I was able to practice MVC architecture, routing, controllers, Blade views, database operations, validation, CRUD operations, file uploading, Git, and GitHub.
+
+This project also helped me understand how different parts of a Laravel application work together to create a functional student registration system.
